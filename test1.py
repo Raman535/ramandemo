@@ -1,9 +1,14 @@
+from unittest  import unittest
 ''' This is my first sample python file '''
 
 
-def hello():
-    print('hello raman !!')
+class hello(unittest.Testcase):
+    
+    def test1(self):
+        pass
 
 
 if __name__ == '__main__':
-    hello()
+    unittest.run()
+    
+    
