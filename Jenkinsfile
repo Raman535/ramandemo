@@ -9,7 +9,7 @@ pipeline {
        }
        stage(test) {
          when {
-          branch 'xr-dev'
+          branch 'xr-dev1'
          }
            steps {
                echo 'Notify GitLab'
