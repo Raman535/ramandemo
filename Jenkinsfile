@@ -3,7 +3,7 @@ pipeline {
 
     stages {
         stage('Preparation') {
-            step {
+            steps {
             echo "My first stage"
 
             }
@@ -14,14 +14,14 @@ pipeline {
                 
                     branch = 'xr-dev'
             }
-            step {
+            steps {
             echo " I am Building the python files"
 
             }
         }
 
         stage('Testing') {
-            step {
+            steps {
             echo " I am testing the python files"
 
             }
