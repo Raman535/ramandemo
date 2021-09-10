@@ -1,6 +1,7 @@
 pipeline {
-    agent cherry
-    
+agent {
+  label 'cherry'
+}    
      environment {
         // Using returnStdout
         CC = """${sh(
