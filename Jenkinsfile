@@ -16,7 +16,9 @@ pipeline {
                 }
             }
             steps {
-            echo " I am Building the python files"
+                withCredentials([usernamePassword(credentialsId: '90e8f891-27fc-47c0-9ec6-db25830d3724', passwordVariable: 'pass', usernameVariable: 'user')]) {
+                    git branch: 'xr-dev', credentialsId: '90e8f891-27fc-47c0-9ec6-db25830d3724', url: 'https://github.com/Raman535/ramandemo'}
+                    echo " I am Building the python files"
 
             }
         }
