@@ -1,8 +1,7 @@
 pipeline {
-    agent any
-
-    stages {
-        environment {
+    agent cherry
+    
+     environment {
         // Using returnStdout
         CC = """${sh(
                 returnStdout: true,
@@ -15,6 +14,7 @@ pipeline {
             )}"""
     }
 
+    stages {
         stage('checkout') {
            
             steps {
