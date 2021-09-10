@@ -12,7 +12,7 @@ pipeline {
         stage('Build') {
             when {
                 expression {
-                    branch = 'xr-dev'
+                    branch = 'xr-dev'||'test'
                 }
             }
             steps {
