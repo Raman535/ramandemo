@@ -11,9 +11,8 @@ pipeline {
 
         stage('Build') {
             when {
-                expression {
-                    branch = 'xr-dev1'
-                }
+                
+                    branch = 'xr-dev'
             }
             step {
             echo " I am Building the python files"
