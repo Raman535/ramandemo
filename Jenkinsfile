@@ -28,13 +28,14 @@ pipeline {
         }
         
       stage('Build') {
-         when {
-            allOf {
-              environment ignoreCase: true, name: 'CC', value: 'clang'
-            }
+     
         steps {
+           when {
+              expression {
+                $CC == "clang" 
+              }
+            }
           echo " I am doing the build...."
-        }
         }
       }
       
