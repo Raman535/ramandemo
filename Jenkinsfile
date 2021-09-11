@@ -32,7 +32,7 @@ pipeline {
         steps {
            when {
               expression {
-                $CC == "clang" 
+                ${CC} == "clang" 
               }
             }
           echo " I am doing the build...."
