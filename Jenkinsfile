@@ -26,12 +26,28 @@ pipeline {
 
             }
         }
-
+        
+      stage('Build') {
+        steps {
+          when {
+            allOf {
+              environment ignoreCase: true, name: 'CC', value: 'clang'
+            }
+}
+        }
+      }
+      
         stage('Testing') {
             steps {
                 echo " I am testing the python files ${CC}"
 
             }
         }
+      
+      stage('Cleaning') {
+        steps {
+          cleanWs()
+        }
+      }
     }
 }
