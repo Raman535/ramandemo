@@ -31,11 +31,11 @@ pipeline {
      
         steps {
           when {
-  allOf {
-    environment ignoreCase: true, name: 'CC', value: 'clang'
-  }
-          echo " I am doing the build...."
+              allOf {
+                environment ignoreCase: true, name: 'CC', value: 'clang'
+              }         
         }
+           echo " I am doing the build...."
       }
       
         stage('Testing') {
